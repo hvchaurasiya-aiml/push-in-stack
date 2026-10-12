@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int stack[5];
+    int top = -1;
+    int value;
+
+    cout << "Enter a value to push: ";
+    cin >> value;
+
+    if (top == 4) {
+        cout << "Stack Overflow";
+    } else {
+        top++;
+        stack[top] = value;
+        cout << "Element pushed successfully." << endl;
+    }
+
+    cout << "Stack elements: ";
+    for (int i = top; i >= 0; i--) {
+        cout << stack[i] << " ";
+    }
+
+    return 0;
+}
